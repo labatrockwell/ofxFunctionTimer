@@ -1,0 +1,45 @@
+************************************************
+ ABOUT 
+************************************************
+* Tool: ofxFunctionTimer
+ 
+Description:
+* Simple tool to do ms timing on functions within an app to figure out where the occasional bottleneck is.  Currently this is OF specific but since win/mac timing is done in a native fashion this tool can be used in any framework after the mutex type is changed.  Currently the tool will only print functions that take over 15ms, but this can be adjusted in code very easily.
+ 
+Documentation
+  * Example Project
+ 
+************************************************
+ SETUP
+************************************************
+Hardware Requirements:
+  * A computer
+ 
+************************************************
+ RUN
+************************************************
+ 
+  * Place root folder in of/addons folder
+  * Open example project
+  * Run example project
+ 
+************************************************
+ RUN FROM SRC 
+************************************************
+ 
+************************************************
+ MORE INFO 
+************************************************
+ 
+* Troubleshooting
+  * I don't see any output
+    * Make sure you haven't set the .enabled variable to false
+    * Either lower the threshold for displaying functions, or be happy because none of your functions are slow
+  * Windows is complaining that there is no __func__ macro.
+    * See the define at the top of the example testApp.cpp code so that __func__ points to __FUNCTION__ in windows
+ 
+* Licensing
+  * TSPS is MIT + LGPL
+ 
+* Notes
+  *
